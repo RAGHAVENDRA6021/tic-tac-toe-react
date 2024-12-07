@@ -5,7 +5,7 @@ const Log = ({gameTurns}) => {
     <ol id="log">
         {
             gameTurns.map(({square:{row,column},player})=>
-            <li key={row+column}>
+            <li key={`${row}${column}`}>
                 {player} selected {row+1} ,{column+1}
             </li>
         )
